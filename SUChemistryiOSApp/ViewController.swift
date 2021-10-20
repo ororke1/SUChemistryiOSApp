@@ -34,16 +34,43 @@ class ViewController: UIViewController {
         
     }
 
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+// waiting for others to push code to start working on showing data on UI
+    // Deletes the current samples saved data or just clears the screen back to default if no data is saved
+    @objc
+    func deleteAction(){
+        
+    }
+    // Saves the current samples data(name,concentration, RGB, absorbance, wavelength, thumbnails)
+    @objc
+    func saveAction(){
+        
+    }
+    
+    func defaultValues(){
+        
+    }
+    
+    func updateValues(){
+        
+    }
+    
+    func deleteValues(){
+        
+    }
+
 }
 
 protocol dropDownProtocol {
     func dropDownPressed(string : String)
 }
-
+    
+    
 class dropDownBtn: UIButton, dropDownProtocol {
     
     func dropDownPressed(string: String) {
