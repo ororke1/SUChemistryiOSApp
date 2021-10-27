@@ -8,7 +8,24 @@ import UIKit
 class ViewController: UIViewController {
     
     var button = dropDownBtn()
-
+// User input variables
+    var userConcentration:Double = 0.0
+    var userSampleName:String = ""
+    var userPathLength:Double = 0.0
+// Calculation Variables
+    var calcWavelength:Double = 0.0
+    var calcAbsorbance:Double = 0.0
+// RGB variables
+    var camRed:Int = 0
+    var camGreen:Int = 0
+    var camBlue:Int = 0
+// sample variables
+    var control = SampleData();
+    var sampleOne = SampleData()
+    var sampleTwo = SampleData()
+    var sampleThree = SampleData()
+    var sampleFour = SampleData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -41,28 +58,57 @@ class ViewController: UIViewController {
 
 // waiting for others to push code to start working on showing data on UI
     // Deletes the current samples saved data or just clears the screen back to default if no data is saved
+    var fileDir:String = ""
     @objc
     func deleteAction(){
-        
+        deleteValues()
+        // using sample one as a temp variable for right nows
+        updateValues(samp: sampleOne)
     }
     // Saves the current samples data(name,concentration, RGB, absorbance, wavelength, thumbnails)
     @objc
     func saveAction(){
+        // looks for working directory
+        fileDir = "\(getFilePath())"
         
     }
     
-    func defaultValues(){
-        
+    func getFilePath()->URL{
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = path[0]
+        return documentsDirectory
     }
     
-    func updateValues(){
+    func defaultValues(samp:SampleData){
+        sampleOne.setSampleName(name: "Sample One")
+        sampleTwo.setSampleName(name: "Sample Two")
+        sampleThree.setSampleName(name: "Sample Three")
+        sampleFour.setSampleName(name: "Sample Four")
         
+        camRed = 0
+        camGreen = 0
+        camBlue = 0
+        
+        userConcentration = 0.0
+        userPathLength = 0.0
+     //   userSampleName = sampleOne.getSampleName()
+    }
+    
+    func updateValues(samp:SampleData){
+        /*
+            Waiting for UI to get finished before puttin in major if statement
+            that tells the different sample objects to load data onto screen
+            
+            Makes use of the setters and getters
+         */
     }
     
     func deleteValues(){
-        
+        // calls default values to reset objects to default standing
+        // using only sample one as a temp variable for right now
+        defaultValues(samp: sampleOne)
+        // check if there is a saved data file to delete or not
     }
-
 }
 
 protocol dropDownProtocol {
