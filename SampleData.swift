@@ -122,15 +122,13 @@ class SampleData {
     func calculateAbsorbanceValue(control: SampleData) {
         let sampleIntensity = self.getIntensity()
         let controlIntensity = control.getIntensity()
-        //divide by zero
+        //Divide by zero
         if(controlIntensity == 0) {
             self.absorbanceValue = 0
-            return
         }
-        //function will return negative infinity if this case is not accounted for
+        //Function will return negative infinity if this case is not accounted for
         if(sampleIntensity == 0) {
             self.absorbanceValue = 1
-            return
         }
         let quotient = 1.0 * sampleIntensity / controlIntensity
         self.absorbanceValue = log10(quotient)
