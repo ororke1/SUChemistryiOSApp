@@ -16,6 +16,7 @@
 		635FBF96270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF95270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift */; };
 		635FBFA0270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */; };
 		635FBFA2270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */; };
+		DE98BC692727378600F25235 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98BC682727378600F25235 /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		635FBF9B270E1DAC00EABB5C /* SUChemistryiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUChemistryiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITests.swift; sourceTree = "<group>"; };
 		635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE98BC682727378600F25235 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		635FBF7D270E1DA900EABB5C /* SUChemistryiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				DE98BC682727378600F25235 /* SampleData.swift */,
 				635FBF7E270E1DA900EABB5C /* AppDelegate.swift */,
 				635FBF80270E1DA900EABB5C /* SceneDelegate.swift */,
 				635FBF82270E1DA900EABB5C /* ViewController.swift */,
@@ -261,6 +264,7 @@
 				635FBF83270E1DA900EABB5C /* ViewController.swift in Sources */,
 				635FBF7F270E1DA900EABB5C /* AppDelegate.swift in Sources */,
 				635FBF81270E1DA900EABB5C /* SceneDelegate.swift in Sources */,
+				DE98BC692727378600F25235 /* SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,19 +443,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9967PBWJCV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SUChemistryiOSApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Cosc426Chem.SUChemistryiOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Cosc426ChemApp.SUChemistryiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -466,19 +473,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9967PBWJCV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SUChemistryiOSApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Cosc426Chem.SUChemistryiOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = Cosc426ChemApp.SUChemistryiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
