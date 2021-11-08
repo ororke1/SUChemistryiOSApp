@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
         //Set the drop down menu's options
         button.dropView.dropDownOptions = ["Blue", "Green", "Magenta", "White", "Black", "Pink"]
-        
+        saveAction()
     }
 
 
@@ -68,15 +68,75 @@ class ViewController: UIViewController {
     // Saves the current samples data(name,concentration, RGB, absorbance, wavelength, thumbnails)
     @objc
     func saveAction(){
-        // looks for working directory
-        fileDir = "\(getFilePath())"
-        
+        writeToFile()
+        readFile()
     }
     
-    func getFilePath()->URL{
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentsDirectory = path[0]
-        return documentsDirectory
+    func getFilePath()->String{
+      //  return documentsDirectory
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        return path
+    }
+    
+    // todo update later on when UI is finished to be able to distinguish between which sample needs to be saved
+    func writeToFile(){
+        let url = NSURL(fileURLWithPath: getFilePath())
+        let test = "hello world"
+        if let pathComponent = url.appendingPathComponent("temp.txt"){
+            let filePath = pathComponent.path
+            let fileManager = FileManager.default
+            fileManager.createFile(atPath: filePath, contents: nil, attributes: nil)
+            if fileManager.fileExists(atPath: filePath){
+                print("File Found... Now writing to file")
+                do{
+                    try test.write(to: pathComponent,atomically: true ,encoding: .utf8)
+                }catch{
+                    print(error.localizedDescription)
+                }
+            }else{
+                print("file not found")
+            }
+        }else{
+            print("path not found")
+        }
+    }
+
+// todo figure out how to rm file from dir
+//      wait for UI to get completed to test with actual sample data saved files
+    func deleteFile(){
+        let url = NSURL(fileURLWithPath: getFilePath())
+        if let pathComponent = url.appendingPathComponent("temp.txt"){
+            let filePath = pathComponent.path
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: filePath){
+                // delete file
+            }else{
+                // do nothing
+            }
+        }else{
+            // path does not exist
+        }
+    }
+    
+    func readFile(){
+        let url = NSURL(fileURLWithPath: getFilePath())
+        if let pathComponent = url.appendingPathComponent("temp.txt"){
+            let filePath = pathComponent.path
+            let fileManager = FileManager.default
+            if  fileManager.fileExists(atPath: filePath){
+                print("File Found... Now reading from file")
+                do{
+                    let test = try String(contentsOf: pathComponent, encoding: .utf8)
+                    print(test)
+                }catch{
+                    print(error.localizedDescription)
+                }
+            }else{
+                print("File not found to read from")
+            }
+        }else{
+            print("path not found")
+        }
     }
     
     func defaultValues(samp:SampleData){
