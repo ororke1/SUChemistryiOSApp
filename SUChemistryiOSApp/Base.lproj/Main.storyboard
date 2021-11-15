@@ -27,7 +27,7 @@
         <!--Camera-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController2" customModule="SUChemistryiOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,48 +44,7 @@
         <scene sceneID="ccR-kA-rlZ">
             <objects>
                 <viewController id="vzF-rD-354" customClass="ViewController" customModule="SUChemistryiOSApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zx6-8D-OrR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2CB-Dh-CmT">
-                                <rect key="frame" x="200" y="244" width="189" height="369"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="DQy-mv-p1l"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="top" secondItem="DQy-mv-p1l" secondAttribute="top" constant="25" id="23N-RT-t6I"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="leading" secondItem="DQy-mv-p1l" secondAttribute="leading" constant="100" id="4ID-mE-qzl"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="leading" secondItem="DQy-mv-p1l" secondAttribute="leading" constant="100" id="5No-d0-0k6"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="top" secondItem="DQy-mv-p1l" secondAttribute="top" constant="200" id="5ie-PX-gP9"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="trailing" secondItem="2CB-Dh-CmT" secondAttribute="trailing" constant="200" id="7hW-Vb-GpP"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="bottom" secondItem="2CB-Dh-CmT" secondAttribute="bottom" constant="50" id="9Sr-sE-QzU"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="leading" secondItem="DQy-mv-p1l" secondAttribute="leading" constant="200" id="Ad1-q1-JRi"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="trailing" secondItem="2CB-Dh-CmT" secondAttribute="trailing" constant="100" id="CxB-JA-oF9"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="bottom" secondItem="2CB-Dh-CmT" secondAttribute="bottom" constant="25" id="JIl-eG-r0a"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="top" secondItem="DQy-mv-p1l" secondAttribute="top" constant="200" id="KhG-9x-APJ"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="leading" secondItem="DQy-mv-p1l" secondAttribute="leading" constant="100" id="Rkx-j2-twb"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="leading" secondItem="DQy-mv-p1l" secondAttribute="leading" constant="25" id="UqL-M6-MKI"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="leading" secondItem="DQy-mv-p1l" secondAttribute="leading" constant="100" id="VBa-gp-ZuM"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="top" secondItem="DQy-mv-p1l" secondAttribute="top" constant="50" id="Wb9-aY-jjK"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="trailing" secondItem="2CB-Dh-CmT" secondAttribute="trailing" constant="100" id="cfB-Vj-QVP"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="leading" secondItem="DQy-mv-p1l" secondAttribute="leading" constant="25" id="hfz-bM-wec"/>
-                            <constraint firstItem="2CB-Dh-CmT" firstAttribute="leading" secondItem="DQy-mv-p1l" secondAttribute="leading" constant="200" id="oHq-1i-SIe"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="trailing" secondItem="2CB-Dh-CmT" secondAttribute="trailing" constant="200" id="q27-zy-gAd"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="bottom" secondItem="2CB-Dh-CmT" secondAttribute="bottom" constant="200" id="qAu-ga-6tb"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="trailing" secondItem="2CB-Dh-CmT" secondAttribute="trailing" constant="100" id="qjR-Hg-Ac9"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="trailing" secondItem="2CB-Dh-CmT" secondAttribute="trailing" constant="200" id="vuv-5O-Ff2"/>
-                            <constraint firstItem="DQy-mv-p1l" firstAttribute="trailing" secondItem="2CB-Dh-CmT" secondAttribute="trailing" constant="25" id="zbi-wa-fD6"/>
-                        </constraints>
-                    </view>
                     <tabBarItem key="tabBarItem" title="Main" id="urW-ns-wn1"/>
-                    <connections>
-                        <outlet property="label" destination="2CB-Dh-CmT" id="nqI-Sh-daX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aX-yL-UcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,14 +60,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Ip3-m1-lbU"/>
-                        <segue destination="vzF-rD-354" kind="relationship" relationship="viewControllers" id="gzq-ue-4Av"/>
-                        <segue destination="oit-DO-3ag" kind="relationship" relationship="viewControllers" id="vSP-Sg-6dV"/>
+                        <segue destination="vzF-rD-354" kind="relationship" relationship="viewControllers" id="e5m-pr-co3"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="YW9-ft-iVH"/>
+                        <segue destination="oit-DO-3ag" kind="relationship" relationship="viewControllers" id="6ze-0V-uIa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfo-Qh-yWk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-261" y="-132"/>
+            <point key="canvasLocation" x="-81" y="-98"/>
         </scene>
     </scenes>
     <resources>

@@ -1,3 +1,10 @@
+
+//
+//  SampleData.swift
+//  SUChemistryiOSApp
+//
+//  Created by Luke Engle on 10/20/21.
+//
 import Foundation
 
 class SampleData {
@@ -12,7 +19,8 @@ class SampleData {
     var greenValue: Int
     var blueValue: Int
     var intensity: Double
-    var wavelengthValue: Double
+    var colorName: String
+    var wavelengthValue: String
     var absorbanceValue: Double
     
     //Initialize a SampleData object
@@ -23,8 +31,9 @@ class SampleData {
         redValue = 0
         greenValue = 0
         blueValue = 0
-        intensity = (Double)(redValue + blueValue + greenValue)
-        wavelengthValue = 0.0
+        intensity = 0
+        colorName = "---"
+        wavelengthValue = "---"
         absorbanceValue = 0.0
     }
     
@@ -84,12 +93,20 @@ class SampleData {
     func setIntensity(intensity: Double) {
         self.intensity = intensity
     }
+    //Getter for color name
+    func getColorName() -> String {
+        return self.colorName
+    }
+    //Setter for color name
+    func setColorName(colorName: String) {
+        self.colorName = colorName
+    }
     //Getter for wavelength value
-    func getWavelengthValue() -> Double {
+    func getWavelengthValue() -> String {
         return self.wavelengthValue
     }
     //Setter for wavelength value
-    func setWavelengthValue(wavelengthValue: Double) {
+    func setWavelengthValue(wavelengthValue: String) {
         self.wavelengthValue = wavelengthValue
     }
     //Getter for absorbance value
@@ -102,112 +119,113 @@ class SampleData {
     }
     
     //calculate absorbance value of a sample
-    func calculateAbsorbanceValue(control: SampleData) -> Double {
-        var sampleIntensity = self.getIntensity()
-        var controlIntensity = control.getIntensity()
+    func calculateAbsorbanceValue(control: SampleData) {
+        let sampleIntensity = self.getIntensity()
+        let controlIntensity = control.getIntensity()
         //Divide by zero
         if(controlIntensity == 0) {
-            return 0
+            self.absorbanceValue = 0
         }
         //Function will return negative infinity if this case is not accounted for
         if(sampleIntensity == 0) {
-            return 1
+            self.absorbanceValue = 1
         }
-        var quotient = 1.0 * sampleIntensity / controlIntensity
+        let quotient = 1.0 * sampleIntensity / controlIntensity
         self.absorbanceValue = log10(quotient)
-        return self.absorbanceValue
     }
     //calculate the name for a color
-    func calculateColorName() -> String {
+    func calculateColorName() {
         //uninitialized or black
         if(redValue == 0 && greenValue == 0 && blueValue == 0) {
-            return "---"
+            self.colorName = "---"
         }
         //red first, green second
         if (redValue >= greenValue && greenValue >= blueValue) {
             if (greenValue < RED_THRESHOLD) {
-                return "Red"
+                self.colorName = "Red"
             }
             else if (greenValue >= YELLOW_THRESHOLD) {
-                return "Yellow"
+                self.colorName = "Yellow"
             }
             else {
-                return "Orange"
+                self.colorName = "Orange"
             }
         }
         //red first, blue second
         else if (redValue >= blueValue && blueValue >= greenValue) {
-            return "Magenta"
+            self.colorName = "Magenta"
         }
         //green first, red second
         else if (greenValue >= redValue && redValue >= blueValue) {
-            return "Green"
+            self.colorName = "Green"
         }
         //green first, blue second
         else if (greenValue >= blueValue && blueValue >= redValue) {
-            return "Cyan"
+            self.colorName = "Cyan"
         }
         //blue first, red second
         else if (blueValue >= redValue && redValue >= greenValue) {
             if (redValue < BLUE_THRESHOLD) {
-                return "Blue"
+                self.colorName = "Blue"
             }
             else {
-                return "Purple"
+                self.colorName = "Purple"
             }
         }
         //blue first, green second
         else if (blueValue >= greenValue && greenValue >= redValue) {
-            return "Teal"
-        } else {
-            return "Undefined"
+            self.colorName = "Teal"
+        }
+        else {
+            self.colorName = "Undefined"
         }
     }
     
     //calculate the wavelength absorption range of a sample
-    func calculateWavelengthValue() -> String {
+    func calculateWavelengthValue() {
         //uninitialized or black
         if(redValue == 0 && greenValue == 0 && blueValue == 0) {
-            return "---"
+            self.wavelengthValue = "---"
         }
         //red first, green second
         if (redValue >= greenValue && greenValue >= blueValue) {
             if (greenValue < RED_THRESHOLD) {
-                return "460-500 nm"
+                self.wavelengthValue = "460-500 nm"
             }
             else if (greenValue >= YELLOW_THRESHOLD) {
-                return "435-480 nm"
+                self.wavelengthValue = "435-480 nm"
             }
             else {
-                return "480-490 nm"
+                self.wavelengthValue = "480-490 nm"
             }
         }
         //red first, blue second
         else if (redValue >= blueValue && blueValue >= greenValue) {
-            return "500-560 nm"
+            self.wavelengthValue = "500-560 nm"
         }
         //green first, red second
         else if (greenValue >= redValue && redValue >= blueValue) {
-            return "400-450 nm & 700-750 nm"
+            self.wavelengthValue = "400-450 nm & 700-750 nm"
         }
         //green first, blue second
         else if (greenValue >= blueValue && blueValue >= redValue) {
-            return "605-750 nm"
+            self.wavelengthValue = "605-750 nm"
         }
         //blue first, red second
         else if (blueValue >= redValue && redValue >= greenValue) {
             if (redValue < BLUE_THRESHOLD) {
-                return "580-595 nm"
+                self.wavelengthValue = "580-595 nm"
             }
             else {
-                return "560-580 nm"
+                self.wavelengthValue = "560-580 nm"
             }
         }
         //blue first, green second
         else if (blueValue >= greenValue && greenValue >= redValue) {
-            return "595-605 nm"
-        } else {
-            return "Undefined"
+            self.wavelengthValue = "595-605 nm"
+        }
+        else {
+            self.wavelengthValue = "Undefined"
         }
     }
 }
