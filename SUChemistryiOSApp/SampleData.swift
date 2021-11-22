@@ -4,7 +4,6 @@
 //
 //  Created by Luke Engle on 10/20/21.
 //
-
 import Foundation
 
 class SampleData {

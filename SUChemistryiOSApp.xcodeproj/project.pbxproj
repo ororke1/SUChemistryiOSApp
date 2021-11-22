@@ -16,6 +16,7 @@
 		635FBF96270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF95270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift */; };
 		635FBFA0270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */; };
 		635FBFA2270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */; };
+		DE29733E274C0AB400C9DD2F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29733D274C0AB400C9DD2F /* CameraViewController.swift */; };
 		DE98BC692727378600F25235 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98BC682727378600F25235 /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		635FBF9B270E1DAC00EABB5C /* SUChemistryiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUChemistryiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITests.swift; sourceTree = "<group>"; };
 		635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE29733D274C0AB400C9DD2F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		DE98BC682727378600F25235 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 				635FBF87270E1DAC00EABB5C /* Assets.xcassets */,
 				635FBF89270E1DAC00EABB5C /* LaunchScreen.storyboard */,
 				635FBF8C270E1DAC00EABB5C /* Info.plist */,
+				DE29733D274C0AB400C9DD2F /* CameraViewController.swift */,
 			);
 			path = SUChemistryiOSApp;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				635FBF7F270E1DA900EABB5C /* AppDelegate.swift in Sources */,
 				635FBF81270E1DA900EABB5C /* SceneDelegate.swift in Sources */,
 				DE98BC692727378600F25235 /* SampleData.swift in Sources */,
+				DE29733E274C0AB400C9DD2F /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,10 +450,12 @@
 				DEVELOPMENT_TEAM = 9967PBWJCV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SUChemistryiOSApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SU Chemistry App";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -476,10 +482,12 @@
 				DEVELOPMENT_TEAM = 9967PBWJCV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SUChemistryiOSApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SU Chemistry App";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
