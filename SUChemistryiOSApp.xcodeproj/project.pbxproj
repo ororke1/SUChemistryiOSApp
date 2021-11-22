@@ -16,6 +16,9 @@
 		635FBF96270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF95270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift */; };
 		635FBFA0270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */; };
 		635FBFA2270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */; };
+		DE114507274C3FDF00BF1263 /* Graphing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE114506274C3FDF00BF1263 /* Graphing.swift */; };
+		DE114509274C401300BF1263 /* TinyConstraints-master in Resources */ = {isa = PBXBuildFile; fileRef = DE114508274C401300BF1263 /* TinyConstraints-master */; };
+		DE11450B274C402300BF1263 /* Charts-master in Resources */ = {isa = PBXBuildFile; fileRef = DE11450A274C402300BF1263 /* Charts-master */; };
 		DE29733E274C0AB400C9DD2F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29733D274C0AB400C9DD2F /* CameraViewController.swift */; };
 		DE98BC692727378600F25235 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98BC682727378600F25235 /* SampleData.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,9 @@
 		635FBF9B270E1DAC00EABB5C /* SUChemistryiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUChemistryiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITests.swift; sourceTree = "<group>"; };
 		635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE114506274C3FDF00BF1263 /* Graphing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graphing.swift; sourceTree = "<group>"; };
+		DE114508274C401300BF1263 /* TinyConstraints-master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "TinyConstraints-master"; sourceTree = SOURCE_ROOT; };
+		DE11450A274C402300BF1263 /* Charts-master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Charts-master"; sourceTree = SOURCE_ROOT; };
 		DE29733D274C0AB400C9DD2F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		DE98BC682727378600F25235 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +109,9 @@
 		635FBF7D270E1DA900EABB5C /* SUChemistryiOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				DE11450A274C402300BF1263 /* Charts-master */,
+				DE114508274C401300BF1263 /* TinyConstraints-master */,
+				DE114506274C3FDF00BF1263 /* Graphing.swift */,
 				DE98BC682727378600F25235 /* SampleData.swift */,
 				635FBF7E270E1DA900EABB5C /* AppDelegate.swift */,
 				635FBF80270E1DA900EABB5C /* SceneDelegate.swift */,
@@ -240,6 +249,8 @@
 				635FBF8B270E1DAC00EABB5C /* LaunchScreen.storyboard in Resources */,
 				635FBF88270E1DAC00EABB5C /* Assets.xcassets in Resources */,
 				635FBF86270E1DA900EABB5C /* Main.storyboard in Resources */,
+				DE114509274C401300BF1263 /* TinyConstraints-master in Resources */,
+				DE11450B274C402300BF1263 /* Charts-master in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				635FBF83270E1DA900EABB5C /* ViewController.swift in Sources */,
+				DE114507274C3FDF00BF1263 /* Graphing.swift in Sources */,
 				635FBF7F270E1DA900EABB5C /* AppDelegate.swift in Sources */,
 				635FBF81270E1DA900EABB5C /* SceneDelegate.swift in Sources */,
 				DE98BC692727378600F25235 /* SampleData.swift in Sources */,
