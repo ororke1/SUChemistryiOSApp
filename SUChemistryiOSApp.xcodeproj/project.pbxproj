@@ -10,13 +10,19 @@
 		635FBF7F270E1DA900EABB5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF7E270E1DA900EABB5C /* AppDelegate.swift */; };
 		635FBF81270E1DA900EABB5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF80270E1DA900EABB5C /* SceneDelegate.swift */; };
 		635FBF83270E1DA900EABB5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF82270E1DA900EABB5C /* ViewController.swift */; };
-		635FBF86270E1DA900EABB5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635FBF84270E1DA900EABB5C /* Main.storyboard */; };
 		635FBF88270E1DAC00EABB5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635FBF87270E1DAC00EABB5C /* Assets.xcassets */; };
 		635FBF8B270E1DAC00EABB5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635FBF89270E1DAC00EABB5C /* LaunchScreen.storyboard */; };
 		635FBF96270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF95270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift */; };
 		635FBFA0270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */; };
 		635FBFA2270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */; };
-		DE98BC692727378600F25235 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98BC682727378600F25235 /* SampleData.swift */; };
+		C2733604274C31DB00BADD78 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2733603274C31DB00BADD78 /* SampleData.swift */; };
+		F20040742739977200DFA1D1 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2004070273996E600DFA1D1 /* Charts.framework */; platformFilter = ios; };
+		F20040752739977200DFA1D1 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2004070273996E600DFA1D1 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2087D0527273B8200581AD9 /* Graphing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2087D0427273B8200581AD9 /* Graphing.swift */; };
+		F25C64DC2739AB18007450E6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25C64DB2739AB18007450E6 /* CameraViewController.swift */; };
+		F25C64E12739B25C007450E6 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F25C64E02739B25C007450E6 /* main.storyboard */; };
+		F291D8E22742D80000E8F14B /* TinyConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F291D8E12742D7F900E8F14B /* TinyConstraints.framework */; platformFilter = ios; };
+		F291D8E32742D80000E8F14B /* TinyConstraints.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F291D8E12742D7F900E8F14B /* TinyConstraints.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +40,49 @@
 			remoteGlobalIDString = 635FBF7A270E1DA900EABB5C;
 			remoteInfo = SUChemistryiOSApp;
 		};
+		F200406F273996E600DFA1D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F200406A273996E500DFA1D1 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		F2004071273996E600DFA1D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F200406A273996E500DFA1D1 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		F291D8E02742D7F900E8F14B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F291D8DC2742D7F800E8F14B /* TinyConstraints.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DD986FB1E4DB973002F80D6;
+			remoteInfo = TinyConstraints;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F20040762739977200DFA1D1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F20040752739977200DFA1D1 /* Charts.framework in Embed Frameworks */,
+				F291D8E32742D80000E8F14B /* TinyConstraints.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		635FBF7B270E1DA900EABB5C /* SUChemistryiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUChemistryiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		635FBF7E270E1DA900EABB5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		635FBF80270E1DA900EABB5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		635FBF82270E1DA900EABB5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		635FBF85270E1DA900EABB5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		635FBF87270E1DAC00EABB5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		635FBF8A270E1DAC00EABB5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		635FBF8C270E1DAC00EABB5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +91,12 @@
 		635FBF9B270E1DAC00EABB5C /* SUChemistryiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUChemistryiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITests.swift; sourceTree = "<group>"; };
 		635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DE98BC682727378600F25235 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		C2733603274C31DB00BADD78 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		F200406A273996E500DFA1D1 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		F2087D0427273B8200581AD9 /* Graphing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphing.swift; sourceTree = "<group>"; };
+		F25C64DB2739AB18007450E6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		F25C64E02739B25C007450E6 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		F291D8DC2742D7F800E8F14B /* TinyConstraints.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TinyConstraints.xcodeproj; path = "TinyConstraints-master/TinyConstraints.xcodeproj"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20040742739977200DFA1D1 /* Charts.framework in Frameworks */,
+				F291D8E22742D80000E8F14B /* TinyConstraints.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +133,7 @@
 				635FBF94270E1DAC00EABB5C /* SUChemistryiOSAppTests */,
 				635FBF9E270E1DAC00EABB5C /* SUChemistryiOSAppUITests */,
 				635FBF7C270E1DA900EABB5C /* Products */,
+				F20040732739977200DFA1D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +150,18 @@
 		635FBF7D270E1DA900EABB5C /* SUChemistryiOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				DE98BC682727378600F25235 /* SampleData.swift */,
 				635FBF7E270E1DA900EABB5C /* AppDelegate.swift */,
 				635FBF80270E1DA900EABB5C /* SceneDelegate.swift */,
 				635FBF82270E1DA900EABB5C /* ViewController.swift */,
-				635FBF84270E1DA900EABB5C /* Main.storyboard */,
+				F25C64DB2739AB18007450E6 /* CameraViewController.swift */,
+				C2733603274C31DB00BADD78 /* SampleData.swift */,
+				F2087D0427273B8200581AD9 /* Graphing.swift */,
 				635FBF87270E1DAC00EABB5C /* Assets.xcassets */,
 				635FBF89270E1DAC00EABB5C /* LaunchScreen.storyboard */,
+				F25C64E02739B25C007450E6 /* main.storyboard */,
 				635FBF8C270E1DAC00EABB5C /* Info.plist */,
+				F291D8DC2742D7F800E8F14B /* TinyConstraints.xcodeproj */,
+				F200406A273996E500DFA1D1 /* Charts.xcodeproj */,
 			);
 			path = SUChemistryiOSApp;
 			sourceTree = "<group>";
@@ -130,6 +183,30 @@
 			path = SUChemistryiOSAppUITests;
 			sourceTree = "<group>";
 		};
+		F200406B273996E500DFA1D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2004070273996E600DFA1D1 /* Charts.framework */,
+				F2004072273996E600DFA1D1 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F20040732739977200DFA1D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F291D8DD2742D7F800E8F14B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F291D8E12742D7F900E8F14B /* TinyConstraints.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +217,7 @@
 				635FBF77270E1DA900EABB5C /* Sources */,
 				635FBF78270E1DA900EABB5C /* Frameworks */,
 				635FBF79270E1DA900EABB5C /* Resources */,
+				F20040762739977200DFA1D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,6 +298,16 @@
 			mainGroup = 635FBF72270E1DA900EABB5C;
 			productRefGroup = 635FBF7C270E1DA900EABB5C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F200406B273996E500DFA1D1 /* Products */;
+					ProjectRef = F200406A273996E500DFA1D1 /* Charts.xcodeproj */;
+				},
+				{
+					ProductGroup = F291D8DD2742D7F800E8F14B /* Products */;
+					ProjectRef = F291D8DC2742D7F800E8F14B /* TinyConstraints.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				635FBF7A270E1DA900EABB5C /* SUChemistryiOSApp */,
@@ -229,14 +317,38 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		F2004070273996E600DFA1D1 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = F200406F273996E600DFA1D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2004072273996E600DFA1D1 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = F2004071273996E600DFA1D1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F291D8E12742D7F900E8F14B /* TinyConstraints.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TinyConstraints.framework;
+			remoteRef = F291D8E02742D7F900E8F14B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		635FBF79270E1DA900EABB5C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				635FBF8B270E1DAC00EABB5C /* LaunchScreen.storyboard in Resources */,
+				F25C64E12739B25C007450E6 /* main.storyboard in Resources */,
 				635FBF88270E1DAC00EABB5C /* Assets.xcassets in Resources */,
-				635FBF86270E1DA900EABB5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +374,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				635FBF83270E1DA900EABB5C /* ViewController.swift in Sources */,
+				C2733604274C31DB00BADD78 /* SampleData.swift in Sources */,
+				F25C64DC2739AB18007450E6 /* CameraViewController.swift in Sources */,
+				F2087D0527273B8200581AD9 /* Graphing.swift in Sources */,
 				635FBF7F270E1DA900EABB5C /* AppDelegate.swift in Sources */,
 				635FBF81270E1DA900EABB5C /* SceneDelegate.swift in Sources */,
-				DE98BC692727378600F25235 /* SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +415,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		635FBF84270E1DA900EABB5C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				635FBF85270E1DA900EABB5C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		635FBF89270E1DAC00EABB5C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,22 +549,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9967PBWJCV;
+				DEVELOPMENT_TEAM = CBL625385D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SUChemistryiOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Cosc426ChemApp.SUChemistryiOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = SUChemistryiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -473,22 +579,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9967PBWJCV;
+				DEVELOPMENT_TEAM = CBL625385D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SUChemistryiOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Cosc426ChemApp.SUChemistryiOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = SUChemistryiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
