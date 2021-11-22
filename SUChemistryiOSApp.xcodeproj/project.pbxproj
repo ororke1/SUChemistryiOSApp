@@ -19,6 +19,8 @@
 		DE114507274C3FDF00BF1263 /* Graphing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE114506274C3FDF00BF1263 /* Graphing.swift */; };
 		DE114509274C401300BF1263 /* TinyConstraints-master in Resources */ = {isa = PBXBuildFile; fileRef = DE114508274C401300BF1263 /* TinyConstraints-master */; };
 		DE11450B274C402300BF1263 /* Charts-master in Resources */ = {isa = PBXBuildFile; fileRef = DE11450A274C402300BF1263 /* Charts-master */; };
+		DE11450E274C409800BF1263 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = DE11450D274C409800BF1263 /* Charts */; };
+		DE114510274C409C00BF1263 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = DE11450F274C409C00BF1263 /* TinyConstraints */; };
 		DE29733E274C0AB400C9DD2F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29733D274C0AB400C9DD2F /* CameraViewController.swift */; };
 		DE98BC692727378600F25235 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98BC682727378600F25235 /* SampleData.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE11450E274C409800BF1263 /* Charts in Frameworks */,
+				DE114510274C409C00BF1263 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +97,7 @@
 				635FBF94270E1DAC00EABB5C /* SUChemistryiOSAppTests */,
 				635FBF9E270E1DAC00EABB5C /* SUChemistryiOSAppUITests */,
 				635FBF7C270E1DA900EABB5C /* Products */,
+				DE11450C274C409800BF1263 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +147,13 @@
 			path = SUChemistryiOSAppUITests;
 			sourceTree = "<group>";
 		};
+		DE11450C274C409800BF1263 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +170,10 @@
 			dependencies = (
 			);
 			name = SUChemistryiOSApp;
+			packageProductDependencies = (
+				DE11450D274C409800BF1263 /* Charts */,
+				DE11450F274C409C00BF1263 /* TinyConstraints */,
+			);
 			productName = SUChemistryiOSApp;
 			productReference = 635FBF7B270E1DA900EABB5C /* SUChemistryiOSApp.app */;
 			productType = "com.apple.product-type.application";
@@ -648,6 +664,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE11450D274C409800BF1263 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Charts;
+		};
+		DE11450F274C409C00BF1263 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 635FBF73270E1DA900EABB5C /* Project object */;
 }
