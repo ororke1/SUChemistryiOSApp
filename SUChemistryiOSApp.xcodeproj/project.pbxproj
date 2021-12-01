@@ -18,6 +18,7 @@
 		F20040742739977200DFA1D1 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2004070273996E600DFA1D1 /* Charts.framework */; platformFilter = ios; };
 		F20040752739977200DFA1D1 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2004070273996E600DFA1D1 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F2087D0527273B8200581AD9 /* Graphing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2087D0427273B8200581AD9 /* Graphing.swift */; };
+		F23D29ED275811D200920BCE /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D29EC275811D200920BCE /* SampleData.swift */; };
 		F25C64DC2739AB18007450E6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25C64DB2739AB18007450E6 /* CameraViewController.swift */; };
 		F25C64E12739B25C007450E6 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F25C64E02739B25C007450E6 /* main.storyboard */; };
 		F291D8E22742D80000E8F14B /* TinyConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F291D8E12742D7F900E8F14B /* TinyConstraints.framework */; platformFilter = ios; };
@@ -92,6 +93,7 @@
 		635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F200406A273996E500DFA1D1 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		F2087D0427273B8200581AD9 /* Graphing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphing.swift; sourceTree = "<group>"; };
+		F23D29EC275811D200920BCE /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		F25C64DB2739AB18007450E6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		F25C64E02739B25C007450E6 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		F291D8DC2742D7F800E8F14B /* TinyConstraints.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TinyConstraints.xcodeproj; path = "TinyConstraints-master/TinyConstraints.xcodeproj"; sourceTree = SOURCE_ROOT; };
@@ -150,6 +152,7 @@
 			children = (
 				635FBF7E270E1DA900EABB5C /* AppDelegate.swift */,
 				635FBF80270E1DA900EABB5C /* SceneDelegate.swift */,
+				F23D29EC275811D200920BCE /* SampleData.swift */,
 				635FBF82270E1DA900EABB5C /* ViewController.swift */,
 				F25C64DB2739AB18007450E6 /* CameraViewController.swift */,
 				F2087D0427273B8200581AD9 /* Graphing.swift */,
@@ -371,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				635FBF83270E1DA900EABB5C /* ViewController.swift in Sources */,
+				F23D29ED275811D200920BCE /* SampleData.swift in Sources */,
 				F25C64DC2739AB18007450E6 /* CameraViewController.swift in Sources */,
 				F2087D0527273B8200581AD9 /* Graphing.swift in Sources */,
 				635FBF7F270E1DA900EABB5C /* AppDelegate.swift in Sources */,
@@ -554,7 +558,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -584,7 +588,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
