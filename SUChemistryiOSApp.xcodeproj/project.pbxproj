@@ -16,7 +16,8 @@
 		635FBF96270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF95270E1DAC00EABB5C /* SUChemistryiOSAppTests.swift */; };
 		635FBFA0270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */; };
 		635FBFA2270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */; };
-		9B17D32B2742D16300C5B319 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B17D32A2742D16300C5B319 /* ViewController2.swift */; };
+		9B50FC41274C3671004913DA /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B50FC40274C3671004913DA /* ViewController2.swift */; };
+		9BB9B26827542A5600D04CF4 /* ChemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB9B26727542A5600D04CF4 /* ChemCell.swift */; };
 		DE98BC692727378600F25235 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE98BC682727378600F25235 /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +52,8 @@
 		635FBF9B270E1DAC00EABB5C /* SUChemistryiOSAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUChemistryiOSAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635FBF9F270E1DAC00EABB5C /* SUChemistryiOSAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITests.swift; sourceTree = "<group>"; };
 		635FBFA1270E1DAC00EABB5C /* SUChemistryiOSAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUChemistryiOSAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9B17D32A2742D16300C5B319 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController2.swift; path = "../../../swiftProject 11:10/SUChemistryiOSApp-camera 2/SUChemistryiOSApp/ViewController2.swift"; sourceTree = "<group>"; };
+		9B50FC40274C3671004913DA /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		9BB9B26727542A5600D04CF4 /* ChemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemCell.swift; sourceTree = "<group>"; };
 		DE98BC682727378600F25235 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,8 +108,9 @@
 				DE98BC682727378600F25235 /* SampleData.swift */,
 				635FBF7E270E1DA900EABB5C /* AppDelegate.swift */,
 				635FBF80270E1DA900EABB5C /* SceneDelegate.swift */,
-				9B17D32A2742D16300C5B319 /* ViewController2.swift */,
 				635FBF82270E1DA900EABB5C /* ViewController.swift */,
+				9B50FC40274C3671004913DA /* ViewController2.swift */,
+				9BB9B26727542A5600D04CF4 /* ChemCell.swift */,
 				635FBF84270E1DA900EABB5C /* Main.storyboard */,
 				635FBF87270E1DAC00EABB5C /* Assets.xcassets */,
 				635FBF89270E1DAC00EABB5C /* LaunchScreen.storyboard */,
@@ -264,7 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B17D32B2742D16300C5B319 /* ViewController2.swift in Sources */,
+				9BB9B26827542A5600D04CF4 /* ChemCell.swift in Sources */,
+				9B50FC41274C3671004913DA /* ViewController2.swift in Sources */,
 				635FBF83270E1DA900EABB5C /* ViewController.swift in Sources */,
 				635FBF7F270E1DA900EABB5C /* AppDelegate.swift in Sources */,
 				635FBF81270E1DA900EABB5C /* SceneDelegate.swift in Sources */,
@@ -447,7 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9967PBWJCV;
+				DEVELOPMENT_TEAM = VL5HK4FKPY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SUChemistryiOSApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "SU Chemistry App";
@@ -479,7 +483,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9967PBWJCV;
+				DEVELOPMENT_TEAM = VL5HK4FKPY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SUChemistryiOSApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "SU Chemistry App";

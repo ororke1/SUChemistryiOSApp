@@ -32,6 +32,10 @@ class ViewController: UIViewController {
     var label3: UILabel!
     var textField1: UITextField!
     var textField2: UITextField!
+    var safeArea : UILayoutGuide!
+    let tableView = UITableView()
+    
+    let list = ["Hey 1","Hey 2","Hey 3"]
     
     
 
@@ -39,7 +43,7 @@ class ViewController: UIViewController {
     override func loadView() {
         view = UIView() // parent class of UIKIT view types
         view.backgroundColor = .white
-        
+        safeArea = view.layoutMarginsGuide
         
         //Configure the button
         button = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width: 0, height:0 ))// changing these does nothing
@@ -53,6 +57,7 @@ class ViewController: UIViewController {
         
         //Set the drop down menu's options
         
+        //labels contraints
         label1 = UILabel()
         label1.translatesAutoresizingMaskIntoConstraints = false
         label1.font = UIFont.systemFont(ofSize: 15)
@@ -66,14 +71,8 @@ class ViewController: UIViewController {
         label2.text = "Label 2"
         label2.numberOfLines = 0
         view.addSubview(label2)
-        /*
-        label3 = UILabel()
-        label3.translatesAutoresizingMaskIntoConstraints = false
-        label3.font = UIFont.systemFont(ofSize: 24)
-        label3.text = "Label 3"
-        label2.numberOfLines = 0
-        view.addSubview(label3)
-        */
+      
+        //textFields contraints
         
         textField1 = UITextField()
         textField1.translatesAutoresizingMaskIntoConstraints = false
@@ -87,27 +86,26 @@ class ViewController: UIViewController {
         textField2.autocorrectionType = .no // to get rid of stupid constrain warning -_-
         textField2.text = "Input 2"
         view.addSubview(textField2)
-        //button Constraints
-        //button.topAnchor.constraint(equalTo: label2.bottomAnchor)
-        //button.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor)
+       
+        
+        //Contraints of dropdown
         
         button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: self.view.firstBaselineAnchor, constant: 75).isActive = true // must find way to scale with other phones
-        //button.firstBaselineAnchor.constraint(equalTo: self.view.firstBaselineAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: safeArea.topAnchor, constant: 0).isActive = true // must find way to scale with other phones
         button.widthAnchor.constraint(equalToConstant: 275).isActive = true
         button.heightAnchor.constraint(equalToConstant: 25).isActive = true
         button.dropView.dropDownOptions = ["Blue", "Green", "Magenta", "White", "Black", "Pink"]
         
+        // add table view
+        
+        view.addSubview(tableView)
+        tableView.dataSource = self
+        tableView.register(ChemCell.self, forCellReuseIdentifier: "cellid")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        //tableView.backgroundColor = .red
         
         NSLayoutConstraint.activate([ // initial all anchors at the same time
-            
-           
-                      // label1.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            //label1.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-            //button.topAnchor.constraint(equalTo: label1.bottomAnchor) // constant + pushes it down the screen
-           // button.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor), // constant + decreases width
-            //button.heightAnchor.constraint(equalTo: view.layoutMarginsGuide.heightAnchor, multiplier: 0.5, constant: -50),
-            
+            //label1 and textfield1 constraints
             
             label1.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 100),
             label1.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
@@ -115,48 +113,32 @@ class ViewController: UIViewController {
             textField1.topAnchor.constraint(equalTo: label1.topAnchor),
             textField1.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 110),
             
+//label 2 contraints
             label2.topAnchor.constraint(equalTo: label1.bottomAnchor, constant: 25),
             label2.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            //label2.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.6,constant: -100 ),
+         
             
-            
+                // textfield 2 constraints
             textField2.topAnchor.constraint(equalTo: label2.topAnchor),
-            textField2.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 75),            /*
-            label3.topAnchor.constraint(equalTo: button.bottomAnchor),
-            label3.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -100), // 15:03
-            label3.widthAnchor.constraint(equalTo:view.layoutMarginsGuide.widthAnchor, multiplier: 0.4, constant: -100),
-            label3.heightAnchor.constraint(equalTo: label2.heightAnchor)
-             */
-        ])
+            textField2.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 75),
+            tableView.topAnchor.constraint(equalTo: label2.bottomAnchor,constant:0),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -100),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                                    ])
         
     }
 
     
     override func viewDidLoad() {
+       
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        /*
-        //Configure the button
-        button = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        button.setTitle("Colors", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        //Add Button to the View Controller
-        self.view.addSubview(button)
-        
-        //button Constraints
-        button.topAnchor.constraint(equalTo: label2.bottomAnchor)
-        //button.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor)
-        button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        //button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        button.firstBaselineAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        button.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        //Set the drop down menu's options
-        button.dropView.dropDownOptions = ["Blue", "Green", "Magenta", "White", "Black", "Pink"]
-        */
+       
+    
         
     }
 
@@ -221,6 +203,24 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return list.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
+        let name = list[indexPath.row]
+        guard let chemCell = cell as? ChemCell else {
+            return cell
+        }
+        //cell.textLabel?.text = name
+        chemCell.nameLabel.text = name
+        chemCell.resLabel.text = name
+        return cell
+    }
+}
 protocol dropDownProtocol {
     func dropDownPressed(string : String)
 }
