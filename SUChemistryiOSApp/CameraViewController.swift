@@ -82,7 +82,7 @@ class CameraViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
         wavelengthLabel.text = currentSample.getWavelengthValue()
         
         //Fill the absorbance label
-        absorbanceLabel.text = String(format: "%f", currentSample.getAbsorbanceValue())
+        absorbanceLabel.text = String(format: "%.2f", currentSample.getAbsorbanceValue())
         
         //Update the image
         imageView.image = currentSample.imageData ?? UIImage(named: "defaultSampleImage/imageView")
