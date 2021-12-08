@@ -25,6 +25,7 @@ class CameraViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
     //Arrange sample objects into an array
     var samples: [SampleData] = []
     
+    
     //Display the current sample Name
     @IBOutlet weak var sampleNameField: UITextField!
     //Display the current sample concentration
