@@ -11,8 +11,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
    /* INSERT MAIN UI VIEW CONTROLLER CODE*/
 
-    @IBAction func toCamera(_ sender: Any) {
-        performSegue(withIdentifier: "segueToCamera", sender: self)
-    }
+
 }
 

@@ -12,7 +12,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
 let imagePicker = UIImagePickerController()
     
-    static var sample = SampleData()
+    var sample = SampleData()
     let control = SampleData()
     
     //labels for data from camera
@@ -24,7 +24,7 @@ let imagePicker = UIImagePickerController()
     var labelColorName = UILabel(frame: CGRect(x: 0, y: 100, width: 1000, height: 50))
     var labelWavelengthValue = UILabel(frame: CGRect(x: 0, y: 120, width: 1000, height: 50))
     
-/*
+
 override func viewDidLoad() {
     super.viewDidLoad()
     //view.backgroundColor = .white
@@ -32,7 +32,7 @@ override func viewDidLoad() {
     imagePicker.allowsEditing = true
 
 }
- */
+ 
 
     
 @IBAction func didTapAddPhotoButton(_ sender: Any) {
@@ -70,13 +70,13 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
     //called after a picture is taken, before session is stopped
     //labels defined here are refreshed with new data and displayed
     override func viewWillAppear(_ animated: Bool) {
-        labelRed.text = "Red: \(CameraViewController.sample.getRedValue())";
-        labelGreen.text = "Green: \(CameraViewController.sample.getGreenValue())";
-        labelBlue.text = "Blue: \(CameraViewController.sample.getBlueValue())";
-        labelIntensity.text = String(format: "Intensity: %.0f", CameraViewController.sample.getIntensity())
-        labelAbsorbance.text = String(format: "Absorbance: %.2f", CameraViewController.sample.getAbsorbanceValue())
-        labelColorName.text = "Color name: \(CameraViewController.sample.getColorName())";
-        labelWavelengthValue.text = "Wavelength range: \(CameraViewController.sample.getWavelengthValue())";
+        labelRed.text = "Red: \(sample.getRedValue())";
+        labelGreen.text = "Green: \(sample.getGreenValue())";
+        labelBlue.text = "Blue: \(sample.getBlueValue())";
+        labelIntensity.text = String(format: "Intensity: %.0f", sample.getIntensity())
+        labelAbsorbance.text = String(format: "Absorbance: %.2f", sample.getAbsorbanceValue())
+        labelColorName.text = "Color name: \(sample.getColorName())";
+        labelWavelengthValue.text = "Wavelength range: \(sample.getWavelengthValue())";
         view.addSubview(labelRed)
         view.addSubview(labelGreen)
         view.addSubview(labelBlue)
@@ -90,17 +90,17 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
     //call after taking a photo of either a sample or control
     func fillSampleDataObject(image:UIImage) -> SampleData {
         let (red, green, blue) = calculateRGB(image:image)
-        CameraViewController.sample.setRedValue(redValue:red)
-        CameraViewController.sample.setGreenValue(greenValue:green)
-        CameraViewController.sample.setBlueValue(blueValue:blue)
+        sample.setRedValue(redValue:red)
+        sample.setGreenValue(greenValue:green)
+        sample.setBlueValue(blueValue:blue)
         
         let intensity = (Double)(red + green + blue)
-        CameraViewController.sample.setIntensity(intensity:intensity)
+        sample.setIntensity(intensity:intensity)
         
-        CameraViewController.sample.calculateColorName()
-        CameraViewController.sample.calculateWavelengthValue()
+        sample.calculateColorName()
+        sample.calculateWavelengthValue()
 
-        return CameraViewController.sample
+        return sample
     }
     
 
@@ -137,7 +137,12 @@ func calculateRGB(image:UIImage) -> (red: Int, green: Int, blue: Int) {
     
     return (red / totalPixels, green / totalPixels, blue / totalPixels)
 }
+
+ 
     
+    
+    
+/*
     var button = dropDownBtn()
    // User input variables
        var userConcentration:Double = 0.0
@@ -498,5 +503,8 @@ func calculateRGB(image:UIImage) -> (red: Int, green: Int, blue: Int) {
            self.delegate.dropDownPressed(string: dropDownOptions[indexPath.row])
            self.tableView.deselectRow(at: indexPath, animated: true)
        }
-       
+*/
+    
+    
+    
 }
