@@ -4,11 +4,14 @@
 //
 
 import Foundation
+import UIKit
 
 class SampleData {
     let RED_THRESHOLD = 100
     let YELLOW_THRESHOLD = 150
     let BLUE_THRESHOLD = 100
+    
+    let DEFAULT_CONCENTRATION = 0.0
     
     var sampleName: String
     var concentrationValue: Double
@@ -20,6 +23,7 @@ class SampleData {
     var colorName: String
     var wavelengthValue: String
     var absorbanceValue: Double
+    var imageData: UIImage?
     
     //Initialize a SampleData object
     init() {
@@ -33,6 +37,7 @@ class SampleData {
         colorName = "---"
         wavelengthValue = "---"
         absorbanceValue = 0.0
+        imageData = nil
     }
     
     //Getter for sample name
@@ -117,9 +122,8 @@ class SampleData {
     }
     
     //calculate absorbance value of a sample
-    func calculateAbsorbanceValue(control: SampleData) {
+    func calculateAbsorbanceValue(controlIntensity: Double) {
         let sampleIntensity = self.getIntensity()
-        let controlIntensity = control.getIntensity()
         //divide by zero
         if(controlIntensity == 0) {
             self.absorbanceValue = 0
@@ -133,6 +137,7 @@ class SampleData {
         let quotient = 1.0 * sampleIntensity / controlIntensity
         self.absorbanceValue = log10(quotient)
     }
+    
     //calculate the name for a color
     func calculateColorName() {
         //uninitialized or black
